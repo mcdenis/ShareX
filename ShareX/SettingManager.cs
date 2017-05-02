@@ -94,10 +94,10 @@ namespace ShareX
 
         private static string GreenshotImageEditorConfigFilePath => Path.Combine(Program.PersonalFolder, "GreenshotImageEditor.ini");
 
-        private static ApplicationConfig Settings { get => Program.Settings; set => Program.Settings = value; }
-        private static TaskSettings DefaultTaskSettings { get => Program.DefaultTaskSettings; set => Program.DefaultTaskSettings = value; }
-        private static UploadersConfig UploadersConfig { get => Program.UploadersConfig; set => Program.UploadersConfig = value; }
-        private static HotkeysConfig HotkeysConfig { get => Program.HotkeysConfig; set => Program.HotkeysConfig = value; }
+        private static ApplicationConfig Settings { get { return Program.Settings; } set { Program.Settings = value; } }
+        private static TaskSettings DefaultTaskSettings { get { return Program.DefaultTaskSettings; } set { Program.DefaultTaskSettings = value; } }
+        private static UploadersConfig UploadersConfig { get { return Program.UploadersConfig; } set { Program.UploadersConfig = value; } }
+        private static HotkeysConfig HotkeysConfig { get { return Program.HotkeysConfig; } set { Program.HotkeysConfig = value; } }
 
         private static ManualResetEvent uploadersConfigResetEvent = new ManualResetEvent(false);
         private static ManualResetEvent hotkeysConfigResetEvent = new ManualResetEvent(false);
